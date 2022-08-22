@@ -1,5 +1,6 @@
 import React from "react";
 
+import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
   ];
 
   return (
-    <div className="App h-screen w-screen">
+    <div className="App w-full overflow-hidden">
       <div className="text-white h-full w-full bg-[#4b4b4b] py-5">
+        <NewExpense />
         <Expenses items={expenses} />
       </div>
     </div>
