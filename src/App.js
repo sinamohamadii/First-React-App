@@ -32,10 +32,14 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (newExpenseData) => {
+    console.log(newExpenseData);
+  }
+
   return (
     <div className="App w-full overflow-hidden">
       <div className="text-white h-full w-full bg-[#4b4b4b] py-5">
-        <NewExpense />
+        <NewExpense onAddExpense={addExpenseHandler} />
         <Expenses items={expenses} />
       </div>
     </div>
